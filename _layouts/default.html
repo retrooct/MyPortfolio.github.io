@@ -4,32 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | {{ site.title }}</title>
-    <!-- Link to the global CSS file -->
     <link rel="stylesheet" href="{{ site.baseurl }}/css/index.css">
 </head>
 
-<!-- Dynamic class added to the body -->
 <body class="page-{{ page.title | downcase }}">
-    <!-- Header Section -->
-    <header>
-        <h1>{{ site.title }}</h1>
-        <p>{{ site.description }}</p>
-        <nav>
+    <header class="site-header">
+        <div class="top-banner">
+            <h1>asample</h1>
+            <p>A retro-style personal site</p>
+        </div>
+
+        <nav class="retro-nav">
             <ul>
                 <li><a href="{{ site.baseurl }}/">Home</a></li>
                 <li><a href="{{ site.baseurl }}/projects/">Projects</a></li>
                 <li><a href="{{ site.baseurl }}/interests/">Interests</a></li>
+                <li><a href="{{ site.baseurl }}/about/">About</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Content Section -->
-    <main>
+    <main class="content-box">
         {{ content }}
     </main>
 
-    <!-- Footer Section -->
-    <footer>
+    <footer class="site-footer">
         <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
     </footer>
 </body>
