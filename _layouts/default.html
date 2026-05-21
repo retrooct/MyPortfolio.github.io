@@ -11,16 +11,51 @@
     <header class="site-header">
         <div class="top-banner">
             <h1>asample</h1>
-            <p>A retro-style personal site</p>
+            <p>Retro-style personal website</p>
         </div>
 
-        <nav class="retro-nav">
-            <ul>
-                <li><a href="{{ site.baseurl }}/">Home</a></li>
-                <li><a href="{{ site.baseurl }}/projects/">Projects</a></li>
-                <li><a href="{{ site.baseurl }}/interests/">Interests</a></li>
-                <li><a href="{{ site.baseurl }}/about/">About</a></li>
+        <nav class="retro-taskbar">
+            <ul class="taskbar-menu">
+                <li class="menu-item">
+                    <button class="menu-button">Home</button>
+                    <div class="dropdown-menu">
+                        <a href="{{ site.baseurl }}/">Main Page</a>
+                        <a href="{{ site.baseurl }}/#updates">Updates</a>
+                        <a href="{{ site.baseurl }}/#featured">Featured</a>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <button class="menu-button">Projects</button>
+                    <div class="dropdown-menu">
+                        <a href="{{ site.baseurl }}/projects/">All Projects</a>
+                        <a href="{{ site.baseurl }}/projects/embedded/">Embedded Systems</a>
+                        <a href="{{ site.baseurl }}/projects/programming/">Programming</a>
+                        <a href="{{ site.baseurl }}/projects/fpga/">FPGA / Digital Logic</a>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <button class="menu-button">Interests</button>
+                    <div class="dropdown-menu">
+                        <a href="{{ site.baseurl }}/interests/">All Interests</a>
+                        <a href="{{ site.baseurl }}/interests/books/">Books</a>
+                        <a href="{{ site.baseurl }}/interests/music/">Music</a>
+                        <a href="{{ site.baseurl }}/interests/tech/">Tech</a>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <button class="menu-button">About</button>
+                    <div class="dropdown-menu">
+                        <a href="{{ site.baseurl }}/about/">About Me</a>
+                        <a href="{{ site.baseurl }}/about/resume/">Resume</a>
+                        <a href="{{ site.baseurl }}/about/contact/">Contact</a>
+                    </div>
+                </li>
             </ul>
+
+            <div class="taskbar-slider"></div>
         </nav>
     </header>
 
@@ -31,5 +66,46 @@
     <footer class="site-footer">
         <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
     </footer>
+
+    <script>
+        const buttons = document.querySelectorAll(".menu-button");
+        const slider = document.querySelector(".taskbar-slider");
+        const menuItems = document.querySelectorAll(".menu-item");
+
+        function moveSlider(button) {
+            const rect = button.getBoundingClientRect();
+            const parentRect = button.closest(".retro-taskbar").getBoundingClientRect();
+
+            slider.style.width = rect.width + "px";
+            slider.style.left = (rect.left - parentRect.left) + "px";
+        }
+
+        buttons.forEach((button, index) => {
+            button.addEventListener("click", () => {
+                menuItems.forEach(item => item.classList.remove("active"));
+                button.parentElement.classList.add("active");
+                moveSlider(button);
+            });
+        });
+
+        window.addEventListener("load", () => {
+            if (buttons.length > 0) {
+                moveSlider(buttons[0]);
+            }
+        });
+
+        window.addEventListener("resize", () => {
+            const activeButton = document.querySelector(".menu-item.active .menu-button") || buttons[0];
+            if (activeButton) {
+                moveSlider(activeButton);
+            }
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!e.target.closest(".menu-item")) {
+                menuItems.forEach(item => item.classList.remove("active"));
+            }
+        });
+    </script>
 </body>
 </html>
