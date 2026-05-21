@@ -1,59 +1,29 @@
-.home-hero {
-    padding: 20px;
-    background: #e6edf2;
-    border: 2px solid #7b92a7;
-    box-shadow: 4px 4px 0 #a2b2bf;
-    margin-bottom: 28px;
-}
+---
+layout: default
+title: Home
+---
 
-.home-hero h1 {
-    color: #1d4f73;
-    margin-bottom: 12px;
-}
+# Welcome to My Portfolio
 
-.home-hero p {
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
+Explore my website using the navigation bar above.
 
-.home-section h2 {
-    color: #1d4f73;
-    margin-bottom: 14px;
-}
+## Featured Sections
 
-.home-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-}
+### Projects
+Embedded systems, FPGA work, low-level programming, and hardware experiments.
 
-.home-card {
-    display: block;
-    text-decoration: none;
-    color: #123;
-    background: #dbe3ea;
-    border: 2px solid #7b92a7;
-    box-shadow: 3px 3px 0 #98aab8;
-    padding: 18px;
-}
+[Go to Projects →]({{ site.baseurl }}/projects/)
 
-.home-card h3 {
-    color: #1f4d73;
-    margin-bottom: 8px;
-}
+---
 
-.home-card p {
-    line-height: 1.5;
-}
+### Interests
+Topics I enjoy exploring including electronics, retro computing, systems design, and technology.
 
-.home-card:hover {
-    background: #c7d7e4;
-    transform: translate(-2px, -2px);
-    box-shadow: 5px 5px 0 #8094a4;
-}
+[Go to Interests →]({{ site.baseurl }}/interests/)
 
-@media (max-width: 768px) {
-    .home-cards {
-        grid-template-columns: 1fr;
-    }
-}
+---
+
+### About
+Background information, experience, and technical interests.
+
+[Go to About →]({{ site.baseurl }}/about/)
