@@ -147,6 +147,28 @@ body {
     color: #dce7f2;
 }
 
+/* Content links */
+
+.content-box a {
+    color: #7fc8ff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.content-box a:hover {
+    color: #ffffff;
+
+    background: rgba(100, 150, 200, 0.15);
+
+    text-decoration: underline;
+}
+
+.content-box a:visited {
+    color: #9db8ff;
+}
+
 /* Footer */
 .site-footer {
     margin-top: 30px;
