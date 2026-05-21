@@ -6,9 +6,17 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #d9dde2;
-    background-image: linear-gradient(to bottom, #dfe4e8, #c7cfd6);
-    color: #123;
+
+    background: #2c3742;
+
+    background-image: linear-gradient(
+        to bottom,
+        #3a4652,
+        #232c34
+    );
+
+    color: #dbe6ef;
+
     min-height: 100vh;
 }
 
