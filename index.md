@@ -9,7 +9,7 @@ Explore my website by clicking on the images below.
 
 <div class="links-row">
 <a href="{{ site.baseurl }}/projects/">
-    <img src="https://raw.githubusercontent.com/HumzaProfessional/MyPortfolio.github.io/main/Images/electronic.jpeg" alt="Projects" class="link-image">
+    <img src="https://raw.githubusercontent.com/retrooct/MyPortfolio.github.io/main/Images/electronic.jpeg" alt="Projects" class="link-image">
     <p>Projects</p>
   <!-- Interests Link -->
   <a href="{{ site.baseurl }}/interests/">
