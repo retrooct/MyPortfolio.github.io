@@ -3,17 +3,36 @@ layout: default
 title: Home
 ---
 
-# Welcome to My Portfolio
+<section class="home-hero">
+  <h1>Welcome to My Portfolio</h1>
 
-Explore my website by clicking on the images below.
+  <p>
+    I’m a computer engineering student interested in embedded systems,
+    hardware-software integration, digital logic, and low-level programming.
+  </p>
 
-<div class="links-row">
-<a href="{{ site.baseurl }}/projects/">
-    <img src="https://raw.githubusercontent.com/retrooct/MyPortfolio.github.io/main/Images/electronic.jpeg" alt="Projects" class="link-image">
-    <p>Projects</p>
-  <!-- Interests Link -->
-  <a href="{{ site.baseurl }}/interests/">
-    <img src="{{ site.baseurl }}/Images/cubes.jpeg" alt="Interests" class="link-image">
-    <p>Interests</p>
-  </a>
-</div>
+  <p>
+    This website collects my projects, technical interests, and background in one place.
+  </p>
+</section>
+
+<section class="home-section">
+  <h2>Featured Areas</h2>
+
+  <div class="home-cards">
+    <a href="{{ site.baseurl }}/projects/" class="home-card">
+      <h3>Projects</h3>
+      <p>Embedded systems, FPGA work, programming projects, and hardware experiments.</p>
+    </a>
+
+    <a href="{{ site.baseurl }}/interests/" class="home-card">
+      <h3>Interests</h3>
+      <p>Topics I’m exploring, including electronics, retro computing, IoT, and systems design.</p>
+    </a>
+
+    <a href="{{ site.baseurl }}/about/" class="home-card">
+      <h3>About</h3>
+      <p>My background, education, experience, and goals as a computer engineering student.</p>
+    </a>
+  </div>
+</section>
