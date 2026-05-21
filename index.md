@@ -3,36 +3,27 @@ layout: default
 title: Home
 ---
 
-<section class="home-hero">
-  <h1>Welcome to My Portfolio</h1>
+# Welcome to My Portfolio
 
-  <p>
-    I’m a computer engineering student interested in embedded systems,
-    hardware-software integration, digital logic, and low-level programming.
-  </p>
+Explore my website using the navigation bar above.
 
-  <p>
-    This website collects my projects, technical interests, and background in one place.
-  </p>
-</section>
+## Featured Sections
 
-<section class="home-section">
-  <h2>Featured Areas</h2>
+### Projects
+Embedded systems, FPGA work, low-level programming, and hardware experiments.
 
-  <div class="home-cards">
-    <a href="{{ site.baseurl }}/projects/" class="home-card">
-      <h3>Projects</h3>
-      <p>Embedded systems, FPGA work, programming projects, and hardware experiments.</p>
-    </a>
+[Go to Projects →]({{ site.baseurl }}/projects/)
 
-    <a href="{{ site.baseurl }}/interests/" class="home-card">
-      <h3>Interests</h3>
-      <p>Topics I’m exploring, including electronics, retro computing, IoT, and systems design.</p>
-    </a>
+---
 
-    <a href="{{ site.baseurl }}/about/" class="home-card">
-      <h3>About</h3>
-      <p>My background, education, experience, and goals as a computer engineering student.</p>
-    </a>
-  </div>
-</section>
+### Interests
+Topics I enjoy exploring including electronics, retro computing, systems design, and technology.
+
+[Go to Interests →]({{ site.baseurl }}/interests/)
+
+---
+
+### About
+Background information, experience, and technical interests.
+
+[Go to About →]({{ site.baseurl }}/about/)
