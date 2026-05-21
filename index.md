@@ -5,25 +5,32 @@ title: Home
 
 # Welcome to My Portfolio
 
-Explore my website using the navigation bar above.
+Explore different sections of the site below.
 
-## Featured Sections
+<div class="home-tabs">
 
-### Projects
-Embedded systems, FPGA work, low-level programming, and hardware experiments.
+<a href="{{ site.baseurl }}/projects/" class="home-tab">
+    <h2>Projects</h2>
+    <p>
+        Embedded systems, FPGA projects, low-level programming,
+        hardware experiments, and IoT systems.
+    </p>
+</a>
 
-[Go to Projects →]({{ site.baseurl }}/projects/)
+<a href="{{ site.baseurl }}/interests/" class="home-tab">
+    <h2>Interests</h2>
+    <p>
+        Electronics, retro computing, computer architecture,
+        systems design, and technology topics.
+    </p>
+</a>
 
----
+<a href="{{ site.baseurl }}/about/" class="home-tab">
+    <h2>About</h2>
+    <p>
+        Background information, technical interests,
+        education, and experience.
+    </p>
+</a>
 
-### Interests
-Topics I enjoy exploring including electronics, retro computing, systems design, and technology.
-
-[Go to Interests →]({{ site.baseurl }}/interests/)
-
----
-
-### About
-Background information, experience, and technical interests.
-
-[Go to About →]({{ site.baseurl }}/about/)
+</div>
