@@ -153,6 +153,65 @@ body {
     font-size: 0.9rem;
 }
 
+/* Homepage tab layout */
+
+.home-tabs {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-top: 24px;
+}
+
+.home-tab {
+    display: block;
+
+    text-decoration: none;
+
+    color: #123;
+
+    background: linear-gradient(
+        to bottom,
+        #dfe7ed,
+        #c7d4de
+    );
+
+    border: 2px solid #7b92a7;
+
+    box-shadow: 4px 4px 0 #9dafbe;
+
+    padding: 20px;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease;
+}
+
+.home-tab h2 {
+    color: #1d4f73;
+
+    margin-bottom: 10px;
+}
+
+.home-tab p {
+    line-height: 1.6;
+}
+
+.home-tab:hover {
+    background: linear-gradient(
+        to bottom,
+        #d3e1eb,
+        #b9cad8
+    );
+
+    transform: translate(-2px, -2px);
+
+    box-shadow: 6px 6px 0 #8799a8;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
     .taskbar-menu {
