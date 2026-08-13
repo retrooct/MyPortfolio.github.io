@@ -1,111 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/index.css">
-</head>
+<body>
+    <div class="site-wrapper">
 
-<body class="page-{{ page.title | downcase }}">
-    <header class="site-header">
-        <div class="top-banner">
-            <h1>asample</h1>
-            <p>Retro-style personal website</p>
+        <header class="site-header">
+            <div class="top-banner">
+                <h1>asample</h1>
+                <p>Retro-style personal website</p>
+            </div>
+
+            <nav class="simple-nav">
+                <a href="{{ site.baseurl }}/">Home</a>
+                <a href="{{ site.baseurl }}/projects/">Projects</a>
+                <a href="{{ site.baseurl }}/interests/">Interests</a>
+                <a href="{{ site.baseurl }}/about/">About</a>
+            </nav>
+        </header>
+
+        <div class="page-layout">
+
+            <aside class="left-sidebar">
+                <h3>Projects</h3>
+                <a href="{{ site.baseurl }}/projects/embedded/">Embedded</a>
+                <a href="{{ site.baseurl }}/projects/fpga/">FPGA</a>
+                <a href="{{ site.baseurl }}/projects/programming/">Programming</a>
+            </aside>
+
+            <main class="main-content">
+                {{ content }}
+            </main>
+
+            <aside class="right-sidebar">
+                <h3>Links</h3>
+                <a href="#">GitHub</a>
+                <a href="{{ site.baseurl }}/about/">About Me</a>
+
+                <h3>Topics</h3>
+                <p>Embedded Systems</p>
+                <p>Retro Computing</p>
+                <p>Hardware</p>
+            </aside>
+
         </div>
 
-        <nav class="retro-taskbar">
-            <ul class="taskbar-menu">
-                <li class="menu-item">
-                    <button class="menu-button">Home</button>
-                    <div class="dropdown-menu">
-                        <a href="{{ site.baseurl }}/">Main Page</a>
-                        <a href="{{ site.baseurl }}/#updates">Updates</a>
-                        <a href="{{ site.baseurl }}/#featured">Featured</a>
-                    </div>
-                </li>
+        <footer class="site-footer">
+            <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+        </footer>
 
-                <li class="menu-item">
-                    <button class="menu-button">Projects</button>
-                    <div class="dropdown-menu">
-                        <a href="{{ site.baseurl }}/projects/">All Projects</a>
-                        <a href="{{ site.baseurl }}/projects/embedded/">Embedded Systems</a>
-                        <a href="{{ site.baseurl }}/projects/programming/">Programming</a>
-                        <a href="{{ site.baseurl }}/projects/fpga/">FPGA / Digital Logic</a>
-                    </div>
-                </li>
-
-                <li class="menu-item">
-                    <button class="menu-button">Interests</button>
-                    <div class="dropdown-menu">
-                        <a href="{{ site.baseurl }}/interests/">All Interests</a>
-                        <a href="{{ site.baseurl }}/interests/books/">Books</a>
-                        <a href="{{ site.baseurl }}/interests/music/">Music</a>
-                        <a href="{{ site.baseurl }}/interests/tech/">Tech</a>
-                    </div>
-                </li>
-
-                <li class="menu-item">
-                    <button class="menu-button">About</button>
-                    <div class="dropdown-menu">
-                        <a href="{{ site.baseurl }}/about/">About Me</a>
-                        <a href="{{ site.baseurl }}/about/resume/">Resume</a>
-                        <a href="{{ site.baseurl }}/about/contact/">Contact</a>
-                    </div>
-                </li>
-            </ul>
-
-            <div class="taskbar-slider"></div>
-        </nav>
-    </header>
-
-    <main class="content-box">
-        {{ content }}
-    </main>
-
-    <footer class="site-footer">
-        <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
-    </footer>
-
-    <script>
-        const buttons = document.querySelectorAll(".menu-button");
-        const slider = document.querySelector(".taskbar-slider");
-        const menuItems = document.querySelectorAll(".menu-item");
-
-        function moveSlider(button) {
-            const rect = button.getBoundingClientRect();
-            const parentRect = button.closest(".retro-taskbar").getBoundingClientRect();
-
-            slider.style.width = rect.width + "px";
-            slider.style.left = (rect.left - parentRect.left) + "px";
-        }
-
-        buttons.forEach((button, index) => {
-            button.addEventListener("click", () => {
-                menuItems.forEach(item => item.classList.remove("active"));
-                button.parentElement.classList.add("active");
-                moveSlider(button);
-            });
-        });
-
-        window.addEventListener("load", () => {
-            if (buttons.length > 0) {
-                moveSlider(buttons[0]);
-            }
-        });
-
-        window.addEventListener("resize", () => {
-            const activeButton = document.querySelector(".menu-item.active .menu-button") || buttons[0];
-            if (activeButton) {
-                moveSlider(activeButton);
-            }
-        });
-
-        document.addEventListener("click", (e) => {
-            if (!e.target.closest(".menu-item")) {
-                menuItems.forEach(item => item.classList.remove("active"));
-            }
-        });
-    </script>
+    </div>
 </body>
-</html>
