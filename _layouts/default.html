@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ page.title }} | {{ site.title }}</title>
+
+    <link rel="stylesheet" href="{{ '/css/index.css' | relative_url }}">
+
+    {% if page.custom_css %}
+    <link rel="stylesheet" href="{{ '/css/' | append: page.custom_css | append: '.css' | relative_url }}">
+    {% endif %}
+</head>
+
 <body>
     <div class="site-wrapper">
 
@@ -8,10 +23,10 @@
             </div>
 
             <nav class="simple-nav">
-                <a href="{{ site.baseurl }}/">Home</a>
-                <a href="{{ site.baseurl }}/projects/">Projects</a>
-                <a href="{{ site.baseurl }}/interests/">Interests</a>
-                <a href="{{ site.baseurl }}/about/">About</a>
+                <a href="{{ '/' | relative_url }}">Home</a>
+                <a href="{{ '/projects/' | relative_url }}">Projects</a>
+                <a href="{{ '/interests/' | relative_url }}">Interests</a>
+                <a href="{{ '/about/' | relative_url }}">About</a>
             </nav>
         </header>
 
@@ -19,9 +34,18 @@
 
             <aside class="left-sidebar">
                 <h3>Projects</h3>
-                <a href="{{ site.baseurl }}/projects/embedded/">Embedded</a>
-                <a href="{{ site.baseurl }}/projects/fpga/">FPGA</a>
-                <a href="{{ site.baseurl }}/projects/programming/">Programming</a>
+
+                <a href="{{ '/projects/embedded/' | relative_url }}">
+                    Embedded
+                </a>
+
+                <a href="{{ '/projects/fpga/' | relative_url }}">
+                    FPGA
+                </a>
+
+                <a href="{{ '/projects/programming/' | relative_url }}">
+                    Programming
+                </a>
             </aside>
 
             <main class="main-content">
@@ -30,10 +54,17 @@
 
             <aside class="right-sidebar">
                 <h3>Links</h3>
-                <a href="#">GitHub</a>
-                <a href="{{ site.baseurl }}/about/">About Me</a>
+
+                <a href="#">
+                    GitHub
+                </a>
+
+                <a href="{{ '/about/' | relative_url }}">
+                    About Me
+                </a>
 
                 <h3>Topics</h3>
+
                 <p>Embedded Systems</p>
                 <p>Retro Computing</p>
                 <p>Hardware</p>
@@ -42,8 +73,11 @@
         </div>
 
         <footer class="site-footer">
-            <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+            <p>
+                &copy; {{ site.time | date: "%Y" }} {{ site.title }}
+            </p>
         </footer>
 
     </div>
 </body>
+</html>
