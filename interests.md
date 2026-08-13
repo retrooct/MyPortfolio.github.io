@@ -6,6 +6,7 @@ permalink: /interests/
 
 # My Interests
 
-Here's a list of my interests:
-- Theoretical computer science
-- Cellular automata
+Here are some topics I am interested in exploring.
+
+- [Theoretical Computer Science]({{ '/interests/theoretical_cs/' | relative_url }})
+- [Cellular Automata]({{ '/interests/celluar_automata/' | relative_url }})
