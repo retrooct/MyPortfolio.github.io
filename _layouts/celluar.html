@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ page.title }} | {{ site.title }}</title>
+
+    <link rel="stylesheet" href="{{ '/css/cellular.css' | relative_url }}">
+</head>
+
+<body>
+
+    <div class="cellular-site">
+
+        <header class="cellular-header">
+            <h1>Cellular Automata</h1>
+
+            <p>Patterns, rules, computation, and emergence.</p>
+        </header>
+
+        <nav class="cellular-nav">
+            <a href="{{ '/' | relative_url }}">Home</a>
+            <a href="{{ '/interests/' | relative_url }}">← Interests</a>
+            <a href="{{ '/interests/theoretical_cs/' | relative_url }}">Theoretical CS</a>
+        </nav>
+
+        <div class="cellular-layout">
+
+            <aside class="cellular-sidebar">
+                <h3>Cellular Automata</h3>
+
+                <a href="#topics">Topics</a>
+                <a href="#elementary-ca">Elementary CA</a>
+                <a href="#game-of-life">Game of Life</a>
+                <a href="#computation">Computation</a>
+
+                <h3>Related</h3>
+
+                <a href="{{ '/interests/theoretical_cs/' | relative_url }}">
+                    Theoretical CS
+                </a>
+            </aside>
+
+            <main class="cellular-content">
+                {{ content }}
+            </main>
+
+        </div>
+
+        <footer class="cellular-footer">
+            <a href="{{ '/interests/' | relative_url }}">
+                Return to Interests
+            </a>
+        </footer>
+
+    </div>
+
+</body>
+</html>
