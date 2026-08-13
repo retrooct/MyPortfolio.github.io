@@ -3,34 +3,29 @@ layout: default
 title: Home
 ---
 
-# Welcome to My Portfolio
+# Welcome
 
-Explore different sections of the site below.
+OddIndex is my personal site for projects, research interests, technical topics, and other things I find interesting.
 
-<div class="home-tabs">
+## Currently
 
-<a href="{{ site.baseurl }}/projects/" class="home-tab">
-    <h2>Projects</h2>
-    <p>
-        Embedded systems, FPGA projects, low-level programming,
-        hardware experiments, and IoT systems.
-    </p>
-</a>
+Working on:
+- Embedded systems projects
+- Hardware and low-level programming
+- Research topics in computing and engineering
 
-<a href="{{ site.baseurl }}/interests/" class="home-tab">
-    <h2>Interests</h2>
-    <p>
-        Electronics, retro computing, computer architecture,
-        systems design, and technology topics.
-    </p>
-</a>
+Exploring:
+- Retro computing
+- Computer architecture
+- Systems design
 
-<a href="{{ site.baseurl }}/about/" class="home-tab">
-    <h2>About</h2>
-    <p>
-        Background information, technical interests,
-        education, and experience.
-    </p>
-</a>
+## Recent
 
-</div>
+### Projects
+A place for my current and completed technical projects.
+
+### Research
+Notes, ideas, and topics I am currently investigating.
+
+### Interests
+Other subjects, technology, and media that I find interesting.
