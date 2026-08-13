@@ -14,15 +14,26 @@
     <div class="cellular-site">
 
         <header class="cellular-header">
-            <h1>Cellular Automata</h1>
 
-            <p>Patterns, rules, computation, and emergence.</p>
+            <img
+                src="{{ '/Images/cellular-header.jpg' | relative_url }}"
+                alt="Cellular Automata header"
+                class="cellular-header-image"
+            >
+
+            <div class="cellular-header-text">
+                <h1>Cellular Automata</h1>
+                <p>Patterns, rules, computation, and emergence.</p>
+            </div>
+
         </header>
 
         <nav class="cellular-nav">
             <a href="{{ '/' | relative_url }}">Home</a>
             <a href="{{ '/interests/' | relative_url }}">← Interests</a>
-            <a href="{{ '/interests/theoretical_cs/' | relative_url }}">Theoretical CS</a>
+            <a href="{{ '/interests/theoretical_cs/' | relative_url }}">
+                Theoretical CS
+            </a>
         </nav>
 
         <div class="cellular-layout">
