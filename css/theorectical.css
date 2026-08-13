@@ -1,0 +1,26 @@
+.theoretical-content {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+}
+
+.theoretical-content > h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.theory-section {
+    margin-bottom: 28px;
+    padding: 18px;
+    border-left: 4px solid #888;
+    background: #252525;
+}
+
+.theory-section h2 {
+    margin-bottom: 8px;
+    font-size: 1.25rem;
+}
+
+.theory-section p {
+    line-height: 1.6;
+}
