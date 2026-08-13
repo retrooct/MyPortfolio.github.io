@@ -6,242 +6,133 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #222b33;
-    background-image: linear-gradient(to bottom, #303b45, #1e252c);
-    color: #d8e4ef;
+    background: #111;
+    color: #ccc;
+}
+
+.site-wrapper {
+    width: 1100px;
+    max-width: 95%;
+    margin: 0 auto;
+    background: #3b3b3b;
     min-height: 100vh;
 }
 
-/* Header */
-.site-header {
-    width: 100%;
-    border-bottom: 2px solid #1a2530;
-}
-
-/* Top banner */
 .top-banner {
-    background: linear-gradient(to right, #34495e, #22313f);
-    border-bottom: 2px solid #16202a;
-    padding: 18px 12px 14px 12px;
-    text-align: center;
+    background: #181818;
+    padding: 30px;
+    border-bottom: 1px solid #444;
 }
 
 .top-banner h1 {
-    font-size: 2.3rem;
-    color: #dcecff;
-    text-shadow: 1px 1px 0 #000;
-    letter-spacing: 1px;
+    color: #eee;
+    font-size: 2.2rem;
 }
 
 .top-banner p {
+    color: #aaa;
     margin-top: 4px;
-    color: #a9c0d4;
-    font-size: 0.95rem;
 }
 
-/* Retro taskbar */
-.retro-taskbar {
-    position: relative;
-    background: repeating-linear-gradient(
-        45deg,
-        #2e3944,
-        #2e3944 4px,
-        #26303a 4px,
-        #26303a 8px
-    );
-    border-top: 1px solid #4b5c6d;
-    border-bottom: 2px solid #111820;
-    padding: 0;
+.simple-nav {
+    background: #333;
+    border-bottom: 1px solid #444;
 }
 
-.taskbar-menu {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    z-index: 2;
-}
-
-.menu-item {
-    position: relative;
-}
-
-.menu-button {
-    background: transparent;
-    border: none;
-    padding: 12px 28px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #d7e7f5;
-    cursor: pointer;
-    position: relative;
-    z-index: 3;
-}
-
-.menu-button:hover {
-    color: #ffffff;
-}
-
-/* Sliding highlight bar */
-.taskbar-slider {
-    position: absolute;
-    bottom: 0;
-    height: 100%;
-    background: linear-gradient(
-        to bottom,
-        rgba(90, 130, 170, 0.7),
-        rgba(40, 70, 100, 0.9)
-    );
-    border-left: 1px solid #7394b3;
-    border-right: 1px solid #7394b3;
-    transition: left 0.25s ease, width 0.25s ease;
-    z-index: 1;
-}
-
-/* Dropdown */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 220px;
-    background: #34414d;
-    border: 1px solid #5f7488;
-    box-shadow: 3px 3px 0 #111820;
-    padding: 6px 0;
-    z-index: 20;
-}
-
-.menu-item.active .dropdown-menu {
-    display: block;
-}
-
-.dropdown-menu a {
-    display: block;
-    padding: 10px 14px;
+.simple-nav a {
+    display: inline-block;
+    padding: 12px 16px;
+    color: #aaa;
     text-decoration: none;
-    color: #dcecff;
-    font-weight: bold;
-    font-size: 0.95rem;
-    border-bottom: 1px solid #4f6273;
 }
 
-.dropdown-menu a:last-child {
-    border-bottom: none;
+.simple-nav a:hover {
+    background: #444;
+    color: #fff;
 }
 
-.dropdown-menu a:hover {
-    background: #496177;
-    color: #ffffff;
+.page-layout {
+    display: grid;
+    grid-template-columns: 180px 1fr 180px;
+    min-height: 480px;
 }
 
-/* Main content */
-.content-box {
-    width: 85%;
-    max-width: 1000px;
-    margin: 28px auto;
-    background: #313c46;
-    border: 1px solid #60788e;
-    box-shadow: 4px 4px 0 #111820;
-    padding: 28px;
-    color: #dce7f2;
-}
-
-/* Content links */
-
-.content-box a {
-    color: #7fc8ff;
-
-    text-decoration: none;
-
-    font-weight: bold;
-}
-
-.content-box a:hover {
-    color: #ffffff;
-
-    background: rgba(100, 150, 200, 0.15);
-
-    text-decoration: underline;
-}
-
-.content-box a:visited {
-    color: #9db8ff;
-}
-
-/* Footer */
-.site-footer {
-    margin-top: 30px;
-    background: #1f3b56;
-    color: #dcecff;
-    text-align: center;
-    padding: 14px;
-    border-top: 2px solid #0f1a24;
+.left-sidebar,
+.right-sidebar {
+    padding: 28px 20px;
     font-size: 0.9rem;
 }
 
-/* Homepage tab layout */
-.home-tabs {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    margin-top: 24px;
+.left-sidebar {
+    border-right: 1px solid #4a4a4a;
 }
 
-.home-tab {
+.right-sidebar {
+    border-left: 1px solid #4a4a4a;
+}
+
+.left-sidebar h3,
+.right-sidebar h3 {
+    color: #eee;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    margin-top: 18px;
+}
+
+.left-sidebar h3:first-child,
+.right-sidebar h3:first-child {
+    margin-top: 0;
+}
+
+.left-sidebar a,
+.right-sidebar a {
     display: block;
+    color: #d3a900;
     text-decoration: none;
-    color: #dce7f2;
-    background: linear-gradient(to bottom, #42515e, #313d48);
-    border: 2px solid #60788e;
-    box-shadow: 4px 4px 0 #111820;
-    padding: 20px;
-    transition:
-        transform 0.15s ease,
-        box-shadow 0.15s ease,
-        background 0.15s ease;
+    margin-bottom: 7px;
 }
 
-.home-tab h2 {
-    color: #8fc7ff;
-    margin-bottom: 10px;
+.left-sidebar a:hover,
+.right-sidebar a:hover {
+    color: #ffd500;
 }
 
-.home-tab p {
+.main-content {
+    padding: 30px;
+    color: #ccc;
+}
+
+.main-content h1,
+.main-content h2 {
+    color: #ddd;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.main-content p {
     line-height: 1.6;
+    margin-bottom: 16px;
 }
 
-.home-tab:hover {
-    background: linear-gradient(to bottom, #4d6172, #394754);
-    transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0 #0c1218;
+.main-content a {
+    color: #e0ad00;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-    .taskbar-menu {
-        flex-wrap: wrap;
-    }
+.site-footer {
+    text-align: center;
+    padding: 30px;
+    color: #aaa;
+    font-size: 0.8rem;
+}
 
-    .menu-button {
-        padding: 10px 18px;
-        font-size: 0.95rem;
-    }
-
-    .dropdown-menu {
-        min-width: 180px;
-    }
-
-    .content-box {
-        width: 92%;
-        padding: 20px;
-    }
-
-    .top-banner h1 {
-        font-size: 1.8rem;
-    }
-
-    .home-tabs {
+@media (max-width: 800px) {
+    .page-layout {
         grid-template-columns: 1fr;
+    }
+
+    .left-sidebar,
+    .right-sidebar {
+        border: none;
+        border-bottom: 1px solid #4a4a4a;
     }
 }
